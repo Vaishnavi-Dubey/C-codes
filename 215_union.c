@@ -1,0 +1,23 @@
+// union
+#include <stdio.h>
+
+// union declaration
+union un {
+    int member1;
+    char member2;
+    float member3;
+};
+
+int main() {
+
+    // defining a union variable
+    union un var1;
+
+    // initializing the union member
+    var1.member1 = 15;
+
+    printf("The value stored in member1 = %d",
+           var1.member1);
+
+    return 0;
+}
