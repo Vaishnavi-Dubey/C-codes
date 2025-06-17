@@ -1,22 +1,17 @@
-// 01_pointer.c
-
-//C program to create, initialize, assign and access a pointer variable.
-
+//pointer.c
 #include <stdio.h>
 
+void pointer() {
+    int x = 10;
+    int *ptr;
+    ptr = &x;
+
+    printf("value of ptr = %p\n", ptr);
+    printf("value at x = %d\n", x);
+    printf("value at *ptr = %d\n", *ptr);
+}
+
 int main() {
-    int num;    //declaration of integer variable
-    int *pNum;  //declaration of integer pointer
-
-    pNum = &num; //assigning address of num
-    num = 100;    //assigning 100 to variable num
-
-    //access value and address using variable num
-    printf("Using variable num:\n");
-    printf("value of num: %d\naddress of num: %u\n", num, &num);
-    //access value and address using pointer variable num
-    printf("Using pointer variable:\n");
-    printf("value of num: %d\naddress of num: %u\n", *pNum, pNum);
-
+    pointer();
     return 0;
 }
